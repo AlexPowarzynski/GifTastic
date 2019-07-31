@@ -36,17 +36,17 @@ function displayGifs() {
 
 }
 
-// Function for displaying movie data
+// Function for displaying gif buttons data
 function renderButtons() {
 
-    // Deleting the movies prior to adding new movies
+    // Deleting the gifs prior to adding new gifs
     // (this is necessary otherwise you will have repeat buttons)
     $("#buttons-view").empty();
 
     // Looping through the array of movies
     for (var i = 0; i < gifButtons.length; i++) {
 
-        // Then dynamicaly generating buttons for each movie in the array
+        // Then dynamicaly generating buttons for each gif button in the array
         // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
         var a = $("<button>");
         // Adding a class of movie-btn to our button
@@ -88,9 +88,9 @@ function animate() {
     }
   };
 
-// Adding a click event listener to all elements with a class of "movie-btn"
+// Adding a click event listener to all elements with a class of "gif-btn"
 $(document).on("click", ".gif-btn", displayGifs);
 $(document).on("click", ".gif", animate);
 
-// Calling the renderButtons function to display the intial buttons
+// Calling the renderButtons function to display the initial buttons
 renderButtons();
